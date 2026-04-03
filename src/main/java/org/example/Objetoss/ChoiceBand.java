@@ -1,5 +1,8 @@
-package org.example;
+package org.example.Objetoss;
 
+
+import org.example.Move;
+import org.example.Pokemon;
 
 public class ChoiceBand implements Objeto {
 

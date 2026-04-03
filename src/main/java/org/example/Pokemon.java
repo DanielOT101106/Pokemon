@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.Objetoss.Objeto;
+
 import java.util.ArrayList;
 import java.util.List;
 
