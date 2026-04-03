@@ -42,6 +42,8 @@ public class Stats {
 
     public void setHealth(int newHealth){ health = newHealth;}
 
+    public void setAttack(int attack) {this.attack = attack;}
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

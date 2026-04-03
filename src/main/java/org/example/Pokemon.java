@@ -8,14 +8,15 @@ public class Pokemon {
     private String type, name;
     private List<Move> moves;
     private Stats stats;
+    private Objeto objeto;
 
-    public Pokemon(String name, Stats stats, String type, List<Move> moves){
+    public Pokemon(String name, Stats stats, String type, List<Move> moves, Objeto objeto){
 
         this.moves = new ArrayList<>(moves);
         this.stats = stats;
         this.type = type;
         this.name = name;
-
+        this.objeto = objeto;
 
     }
 
@@ -26,6 +27,8 @@ public class Pokemon {
     public List<Move> getMoves(){return moves;}
 
     public String getName() {return name;}
+
+    public Objeto getObjeto() {return objeto;}
 
     public void addOrReplaceMove(Move move, int replaceIndex) {
         // Comprobamos si ya tiene un movimiento con el mismo nombre
@@ -46,6 +49,9 @@ public class Pokemon {
         }
     }
 
+    public void efectuarMetodoObjeto(){
+        objeto.aplicarEfecto(this);
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

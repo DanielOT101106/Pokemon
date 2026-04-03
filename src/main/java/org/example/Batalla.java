@@ -61,8 +61,14 @@ public class Batalla {
                 opcion = -1;
             }
         }
+        Move elegido = pokemon.getMoves().get(opcion - 1);
 
-        return pokemon.getMoves().get(opcion - 1);
+        // El objeto puede modificar el movimiento
+        if (pokemon.getObjeto() != null ) {
+            elegido = pokemon.getObjeto().elegirMovimiento(elegido);
+        }
+
+        return elegido;
     }
 
     private Pokemon elegirPokemon(EquipoPokemon equipoPokemonEjemplo, Pokemon pokemonActivo) {
