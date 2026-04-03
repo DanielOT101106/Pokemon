@@ -44,6 +44,10 @@ public class Stats {
 
     public void setAttack(int attack) {this.attack = attack;}
 
+    public void setSpeed(int speed) {this.speed = speed;}
+
+    public void setSpecial_attack(int special_attack) {this.special_attack = special_attack;}
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
